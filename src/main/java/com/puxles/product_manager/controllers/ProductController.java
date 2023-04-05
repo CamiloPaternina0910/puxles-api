@@ -53,7 +53,7 @@ public class ProductController {
 
     @GetMapping("/filter/by/name")
     public ResponseEntity<GeneralResponse> filterByName(@RequestParam("name") String name){
-         List<Product> products = productService.findByName(name + " ");
+         List<Product> products = productService.findByName(name);
          return new ResponseEntity<>(GeneralResponse.builder()
                  .error(false)
                  .status(200)
